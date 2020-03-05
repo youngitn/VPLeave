@@ -1,6 +1,6 @@
 <?PHP
 		include("includes/includes.php");
-		
+		//go
 		$CQG04 		= str_filter($_POST["CQG04"]);	//起始日期
 		$CQG05 		= str_filter($_POST["CQG05"]);   //截止日期
 		$stime 		= str_filter($_POST["stime"]);   //開始時分
