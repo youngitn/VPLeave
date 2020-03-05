@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無標題文件</title>
+<style type="text/css">
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(image/background-3.jpg);
+	background-repeat: repeat;
+}
+</style>
+<link href="css/vp.css" rel="stylesheet" type="text/css" />
+<link href="css/jquery-ui-1.10.1.css" rel="stylesheet">
+<link href="css/siena.datepicker.css" rel="stylesheet">
+<link href="css/santiago.datepicker.css" rel="stylesheet">
+<link href="css/latoja.datepicker.css" rel="stylesheet">
+<link href="css/lugo.datepicker.css" rel="stylesheet">
+<link href="css/cangas.datepicker.css" rel="stylesheet">
+<link href="css/vigo.datepicker.css" rel="stylesheet">
+<link href="css/nigran.datepicker.css" rel="stylesheet">
+
+</head>
+<body>
+<table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="760" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="200" valign="bottom"><table width="830" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="45" align="left" class="font_20px">歡迎 , 卓志華 </td>
+          </tr>
+          <tr>
+            <td height="45" align="left" class="font_20px">請選擇您請假天數</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td height="30" background="image/2-md.png">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="410" valign="top"><table width="830" border="0" align="center" cellpadding="0" cellspacing="0" class="font_12pt">
+          <tr>
+            <td width="415" valign="bottom">請假起始日期</td>
+            <td width="415" valign="bottom">&nbsp;</td>
+            </tr>
+          <tr>
+            <td height="45"><div>
+              <input type="text" class="font_13pt" id="date-picker-input-1" />
+            </div></td>
+            <td>&nbsp;</td>
+            </tr>
+          <tr>
+            <td height="50">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>請假截止日期</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="45"><div>
+              <input type="text" class="font_13pt" id="date-picker-input-2" />
+            </div></td>
+            <td>&nbsp;</td>
+          </tr>
+          </table></td>
+      </tr>
+      <tr>
+        <td height="60" align="center">
+        <a href="javascript:history.back()"><img src="image/back.png" width="179" height="68" border="0" /></a>
+        <a href="leave-enter_md.html"><img src="image/Sent-out.png" width="179" height="68" border="0" /></a>
+        <a href="index.html"><img src="image/select.png" alt="" width="179" height="68" border="0" /></a></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/jquery-ui-1.10.1.min.js"></script>
+	<script>
+		$(function() {
+			$( "#date-picker-input-1" ).datepicker({
+				inline: true,
+				showOtherMonths: true
+			})
+			.datepicker('widget').wrap('<div class="datepicker ll-skin-nigran"/>');
+		});
+	</script>
+    <script src="js/jquery-1.9.1.js"></script>
+	<script src="js/jquery-ui-1.10.1.min.js"></script>
+	<script>
+		$(function() {
+			$( "#date-picker-input-2" ).datepicker({
+				inline: true,
+				showOtherMonths: true
+			})
+			.datepicker('widget').wrap('<div class="datepicker ll-skin-nigran"/>');
+		});
+	</script>
+</body>
+</html>
