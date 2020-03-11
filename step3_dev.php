@@ -325,7 +325,7 @@ function jqAjaxGetWorkTime(date,empid){
               </tr>
               <tr>
                 <td height="45"><input type="text" name="CQG05" id="CQG05" class="font_13pt" value="<?=$date; ?>" maxlength="10" readonly /></td>
-                <td><select class="font_13pt" name="timeEnd" id="timeEndSelect" /> </td>
+                <td><select class="font_13pt" name="timeEnd" id="timeEndSelect" /> </td>123  
               </tr>
             </table>
           </td>
