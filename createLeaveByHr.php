@@ -208,7 +208,15 @@
 			//echo " 序號:".$CQH02." 啟始日:".$CQH05." 啟始時間:".$CQH051." 截止日:".$CQH06." 截止時間:".$CQH061."\n";
 			//晚班 跨日單一天會跑兩次 故break
 			if ($isOverDay == "overDay" && $numberOfDays == 2){break;}
-			$nowDay++;			
+			$nowDay++;
+			
+			//有一天的請假天數 or 時數為0
+			if ($leaveDay == 0 || $diffTime == 0){
+				$state = "F";
+				$message = "休假選擇時數錯誤,請重新輸入";
+				echo buildJson($state,$message);
+				die();
+			}
 			
 		}
 		//for ( $i = 1; $i <= $nowDay; $i++) {
@@ -230,13 +238,7 @@
 			die();
 		}
 
-		//請假總數為0
-		if ($CQG08 == 0){
-			$state = "F";
-			$message = "休假選擇時數錯誤,請重新輸入";
-			echo buildJson($state,$message);
-			die();
-		}
+		
 		
 		
 			
