@@ -20,6 +20,13 @@
 			echo buildJson($state,$message);
 			die();
 		}
+		//特休只能請整日
+		if ($_SESSION["MyMember"]["CQG03"]=="06" && !is_int($leaveDay)){
+			$state = "F";
+			$message = "特休只限請整天";
+			echo buildJson($state,$message);
+			die();
+		}
 		
 		
 		//給資料序號 先找出最後一筆序號數字 加1後為最新一筆序號
@@ -183,10 +190,9 @@
 			
 			$CQG06 += $diffTime;	//請假總時數
 			$CQG08 += $leaveDay;	//請假天數
-			$tmpTimeArray = explode(":", $CQH051);
-			$CQH051 = sprintf("%02d",$tmpTimeArray[0]).":".sprintf("%02d",$tmpTimeArray[1]);	//時間雙位轉換
-			$tmpTimeArray = explode(":", $CQH061);
-			$CQH061 = sprintf("%02d",$tmpTimeArray[0]).":".sprintf("%02d",$tmpTimeArray[1]);	//時間雙位轉換
+			
+			$CQH051 = fixTimeNumber($CQH051);	//時間雙位轉換
+			$CQH061 = fixTimeNumber($CQH061);	//時間雙位轉換
 			$data .= "<tr>".
 			"<td height='30'>&nbsp;&nbsp;".$CPY04."<!--班別--></td>".
 			"<td>&nbsp;&nbsp;".$CQH05."<!--起始日期--></td>".
@@ -229,9 +235,9 @@
 		$CQG02 = $CQH02;		//行序
 		$CQG03 = $_SESSION["MyMember"]["CQG03"];	//假別代號
 		//$CQG04			//起始日期
-		$CQG041 = $stime; 			//起始時分
+		$CQG041 = fixTimeNumber($stime); 			//起始時分
 		//CQG05				//截止日期
-		$CQG051 = $etime;			//截止時分
+		$CQG051 = fixTimeNumber($etime);			//截止時分
 		//CQG06				//請假總時數
 		$CQG07 = "N";		//預先借假否
 		//CQG08				//請假天數
@@ -296,6 +302,16 @@
 			return "OK";
 		}
 
+		/**
+		 * 時間位數轉雙位
+		 * $time String
+		 * ex:9:5=>09:05
+		 */
+		function fixTimeNumber($time){
+			$tmpTimeArray = explode(":", $time);
+			$ret = sprintf("%02d",$tmpTimeArray[0]).":".sprintf("%02d",$tmpTimeArray[1]);	//時間雙位轉換
+			return $ret; 
+		}
 		
 		function ifReLeaveNightClass($db,$Oracle,$empId,$CQG04,$CQG05,$stime,$etime){
 			

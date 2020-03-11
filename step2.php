@@ -20,7 +20,7 @@ function SelectLeave(CQG03) {
 	ajaxobj.callback = function (xmlobj) {
 		var response = xmlobj.responseText;
         if (response == "S") {
-			location.href = "step3.php?company=<?=$company?>";
+			location.href = "step3_dev.php?company=<?=$company?>";
         } else {
 			alert("請假類別錯誤");
 			window.location.reload();

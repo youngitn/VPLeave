@@ -15,7 +15,7 @@
             <td height="120" colspan="3" align="center" valign="top"><img src="image/staff.png" width="450" height="100" /></td>
           </tr>
           <tr>
-            <td align="right" valign="center"><a href="step6.php?company=modus"><img src="image/modus-card.png" width="400" height="249" border="0" /></a></td>
+            <td align="right" valign="center"><a href="step1.php?company=modus"><img src="image/modus-card.png" width="400" height="249" border="0" /></a></td>
             <td width="30">&nbsp;</td>
             <td align="left" valign="center"><a href="step1.php?company=vp"><img src="image/VP-card.png" width="400" height="249" border="0" /></a></td>
           </tr>

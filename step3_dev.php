@@ -288,8 +288,11 @@ function jqAjaxGetWorkTime(date,empid){
                 <td height="45" align="left" class="font_20px">歡迎 , <?php echo $_SESSION["MyMember"]["Name"]; ?></td>
               </tr>
               <tr>
-                <td height="45" align="left" class="font_20px">請選擇您請假天數</td>
+                <td height="45" align="left" class="font_20px">請選擇請假開始與結束時間</td>
               </tr>
+			  <tr> 
+			  <td><font color="red">***請先點選日期,再選擇時間***</font></td>
+			  </tr>
               <tr>
                 <td>&nbsp;</td>
               </tr>
