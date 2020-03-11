@@ -20,7 +20,7 @@
             <td align="left" valign="center"><a href="step1.php?company=vp"><img src="image/VP-card.png" width="400" height="249" border="0" /></a></td>
           </tr>
           <tr>
-            <td align="right" valign="center">&nbsp;</td>
+            <td align="right" valign="center">&nbsp;</td> 
             <td>&nbsp;</td>
             <td align="left" valign="center">&nbsp;</td>
           </tr>
