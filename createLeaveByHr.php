@@ -20,13 +20,6 @@
 			echo buildJson($state,$message);
 			die();
 		}
-		//特休只能請整日
-		if ($_SESSION["MyMember"]["CQG03"]=="06" && !is_int($leaveDay)){
-			$state = "F";
-			$message = "特休只限請整天";
-			echo buildJson($state,$message);
-			die();
-		}
 		
 		
 		//給資料序號 先找出最後一筆序號數字 加1後為最新一筆序號
@@ -226,6 +219,13 @@
 		if ($_SESSION["MyMember"]["CQG03"]=="06" && isOverLeave($db,$Oracle,$empId,$CQG08) == "Y"){
 			$state =  "F";
 			$message = "特休可休時數不足";
+			echo buildJson($state,$message);
+			die();
+		}
+		//特休只能請整日
+		if ($_SESSION["MyMember"]["CQG03"]=="06" && !is_int($leaveDay)){
+			$state = "F";
+			$message = "特休只限請整天";
 			echo buildJson($state,$message);
 			die();
 		}
