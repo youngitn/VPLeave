@@ -223,12 +223,21 @@
 			die();
 		}
 		//特休只能請整日
-		if ($_SESSION["MyMember"]["CQG03"]=="06" && !is_int($leaveDay)){
+		if ($_SESSION["MyMember"]["CQG03"]=="06" && !is_int($CQG08)){
 			$state = "F";
 			$message = "特休只限請整天";
 			echo buildJson($state,$message);
 			die();
 		}
+
+		//請假總數為0
+		if ($CQG08 == 0){
+			$state = "F";
+			$message = "休假選擇時數錯誤,請重新輸入";
+			echo buildJson($state,$message);
+			die();
+		}
+		
 		
 			
 		$CQG01 = $empId;		//工號
