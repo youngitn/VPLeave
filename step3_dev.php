@@ -322,7 +322,7 @@ function jqAjaxGetWorkTime(date,empid){
               <tr>
                 <td>請假截止日期</td>
                 <td>請假截止時分</td> 
-              </tr>
+              </tr>   
               <tr>
                 <td height="45"><input type="text" name="CQG05" id="CQG05" class="font_13pt" value="<?=$date; ?>" maxlength="10" readonly /></td>
                 <td><select class="font_13pt" name="timeEnd" id="timeEndSelect" /> </td>
