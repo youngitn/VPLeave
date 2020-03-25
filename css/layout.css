@@ -16,3 +16,17 @@ body {
 	margin-left:-415px;
 }
 
+.BOXX {
+	width: 830px;
+	height: 369px;
+	border: 0px solid #444;
+	box-shadow: 0px 0px 0px #666;
+	
+	position:absolute;
+	left:50%;
+	top:35%;
+	
+	margin-top:-250px;
+	margin-left:-415px;
+}
+
