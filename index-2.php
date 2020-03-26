@@ -12,7 +12,7 @@
       <td>
         <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
           <tr>
-            <td height="120" colspan="3" align="center" valign="top"><img src="image/index-1.png" width="450" height="100" />Nhân viên lựa chọn đăng nhập</td>
+            <td height="120" colspan="3" align="center" valign="top"><img src="image/index-1.png" width="450" height="100" /></td>
           </tr>
           <tr>
             <td align="right" valign="center"><a href="http://leave.vpcomponents.com/"><img src="image/index-2.png" width="400" height="249" border="0" /></a></td>
