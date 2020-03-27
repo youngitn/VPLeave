@@ -186,6 +186,7 @@
 			
 			$CQH051 = fixTimeNumber($CQH051);	//時間雙位轉換
 			$CQH061 = fixTimeNumber($CQH061);	//時間雙位轉換
+			$leaveDay = round($leaveDay,2);
 			$data .= "<tr>".
 			"<td height='30'>&nbsp;&nbsp;".$CPY04."<!--班別--></td>".
 			"<td>&nbsp;&nbsp;".$CQH05."<!--起始日期--></td>".
