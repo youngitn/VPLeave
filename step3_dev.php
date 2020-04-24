@@ -97,8 +97,8 @@ while ($row = oci_fetch_array($rs, OCI_ASSOC + OCI_RETURN_NULLS)) {
 
 	$(function() {
 		$('#CQG04').datepick({
-			minDate: -8,
-			maxDate: <?= $maxDate; ?>,
+			// minDate: -8,
+			// maxDate: <?= $maxDate; ?>,
 			onSelect: function(dateText) {
 				//$("#CQG05").val(this.value);
 				jqAjaxGetWorkTime(this.value, '<?= $empId ?>', 'timeStart');
@@ -106,8 +106,8 @@ while ($row = oci_fetch_array($rs, OCI_ASSOC + OCI_RETURN_NULLS)) {
 		});
 
 		$('#CQG05').datepick({
-			minDate: -8,
-			maxDate: <?= $maxDate; ?>,
+			// minDate: -8,
+			// maxDate: <?= $maxDate; ?>,
 			onSelect: function(dateText) {
 				//$("#CQG05").val(this.value);
 				//截止日期不做假日檢查 如開啟後 當起日周五20:00挑好後 截止日要挑周六會被擋
